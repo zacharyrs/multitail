@@ -59,12 +59,12 @@ typedef enum { SCHEME_TYPE_EDIT = 0, SCHEME_TYPE_FILTER } filter_edit_scheme_t;
 #endif
 
 #if defined(UTF8_SUPPORT) && !defined(__APPLE__)
-        #if defined(__FreeBSD__) || defined (__linux__)
-                #include <panel.h>
+        #if defined(__FreeBSD__)
                 #include <curses.h>
+                #include <panel.h>
         #else
-                #include <ncursesw/panel.h>
                 #include <ncursesw/ncurses.h>
+                #include <ncursesw/panel.h>
         #endif
 #else
 	#if defined(__APPLE__)
