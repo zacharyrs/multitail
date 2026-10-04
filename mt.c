@@ -3096,6 +3096,9 @@ int check_paths(void)
 					cur -> filename   = mystrdup(files.gl_pathv[fi]);
 					cur -> line_wrap  = default_linewrap;
 					cur -> win_height = -1;
+					cur -> close_idle = cdg[loop].close_idle;
+					cur -> restart.restart = -1;
+					cur -> restart.first = 1;
 					cur -> statistics.sccfirst = 1;
 					set_default_parameters_if_not_given_do(cur, win_nr);
 

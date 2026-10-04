@@ -146,6 +146,8 @@ typedef struct
 
 	char in_one_window;
 	int window_nr;	/* if 'in_one_window' is set, merge into the window 'window_nr' */
+
+	int close_idle;
 } check_dir_glob;
 
 typedef struct
